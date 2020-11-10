@@ -6,10 +6,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  href="{% static 'styles.css'%}">
-    <title>Article list</title>
+    <title>Django Blog</title>
 </head>
 <body>
     <h1><a href="{% url 'articles:article_list' %}"><img src="{% static 'logo.png' %}" alt="logo"></a></h1>
+    <nav>
+        <ul>
+            <li>
+                <form action="{% url 'accounts:logout'%}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
     <div class="wrapper">
         {% block content%}
 
