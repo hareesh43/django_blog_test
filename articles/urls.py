@@ -8,6 +8,7 @@ app_name = 'articles'
 
 urlpatterns = [
     path('',views.article_list,name ='article_list'),
+    path('create/',views.create_article,name='create'),
     path('<str:slug_thing>/',views.article_details,name='details')
     ]
 # for static files
