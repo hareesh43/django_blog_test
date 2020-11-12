@@ -13,7 +13,7 @@
     <nav>
         <ul>
             <li>
-                <form action="{% url 'accounts:logout'%}" method="POST">
+                <form action="{% url 'accounts:logout'%}" method="POST" class="site-form">
                     {% csrf_token %}
                     <button type="submit">Logout</button>
                 </form>

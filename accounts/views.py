@@ -2,6 +2,8 @@ from django.http import request
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth import login,logout
+
+
 # Create your views here.
 def sign_up(request):
     if request.method == 'POST':
